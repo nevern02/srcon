@@ -12,6 +12,11 @@ module Srcon
     attr_accessor :id, :type
     attr_reader :body
 
+    def self.from_message(body, addrinfo, rflags)
+      body_unpacked = body.unpack('l<l<l<Z*')
+      new(body_unpacked[3], body_unpacked[2], body_unpacked[0])
+    end
+
     # @param [String] body The message body for the packet
     def initialize(body = '', type = SERVERDATA_EXECCOMMAND, id = 1)
       @body = body
@@ -31,7 +36,7 @@ module Srcon
       MINIMUM_BYTE_SIZE + body.bytesize
     end
 
-    def to_s
+    def to_b
       sizeb = [size].pack('l<')
       idb   = [id].pack('l<')
       typeb = [type].pack('l<')

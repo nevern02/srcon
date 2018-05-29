@@ -1,5 +1,6 @@
-require "srcon/version"
+require 'srcon/connection'
+require 'srcon/version'
 
 module Srcon
-  # Your code goes here...
 end
+

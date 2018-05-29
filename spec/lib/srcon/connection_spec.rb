@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Srcon::Connection do
+  #TODO: Mock the server?
   subject(:connection) { described_class.new('107.173.81.126', 38517) }
 
   it 'opens a socket to the specified server' do

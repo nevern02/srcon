@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Brandon R."]
   spec.email         = ["brandon@blrice.net"]
 
-  spec.summary       = %q{A socket library implementing the Steam RCON protocol.}
-  spec.description   = %q{A socket library implementing the Steam RCON protocol.}
+  spec.summary       = %q{A socket library implementing Valve's RCON protocol.}
+  spec.description   = %q{A socket library implementing Valve's RCON protocol.}
   spec.homepage      = "https://github.com/nevern02/srcon"
   spec.license       = "MIT"
 

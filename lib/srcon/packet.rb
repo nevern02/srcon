@@ -9,8 +9,7 @@ module Srcon
     SERVERDATA_EXECCOMMAND    = 2
     SERVERDATA_RESPONSE_VALUE = 0
 
-    attr_accessor :id, :type
-    attr_reader :body
+    attr_reader :id, :body, :type
 
     def self.from_message(body, addrinfo, rflags)
       body_unpacked = body.unpack('l<l<l<Z*')
